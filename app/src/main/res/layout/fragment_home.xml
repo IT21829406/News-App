@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DCDCE6"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="News"
+        android:textStyle="bold"
+        android:fontFamily="@font/acme"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <ProgressBar
+        android:layout_marginTop="30dp"
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="#C832D3"/>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/cardview" />
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
